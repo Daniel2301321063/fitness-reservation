@@ -24,7 +24,7 @@ Feature: Reserve Training
     When the user reserves the training
     Then the reservation should fail
 
-  Scenario: Available spots decrease after reservation
+  Scenario: Reserved spots increase after reservation
     Given the user is logged in
     And the training has available spots
     When the user reserves the training

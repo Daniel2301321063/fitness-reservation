@@ -11,6 +11,10 @@ public class UserService {
 
     public boolean register(User user) {
 
+        if (user == null) {
+            return false;
+        }
+
         if (user.getName() == null || user.getName().isEmpty()) {
             return false;
         }
@@ -19,7 +23,7 @@ public class UserService {
             return false;
         }
 
-        if (user.getPassword().length() < 6) {
+        if (user.getPassword() == null || user.getPassword().length() < 6) {
             return false;
         }
 

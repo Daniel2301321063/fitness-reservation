@@ -29,6 +29,14 @@ public class Training {
     }
 
     public void reserveSpot() {
-        reservedSpots++;
+        if (hasAvailableSpots()) {
+            reservedSpots++;
+        }
+    }
+
+    public void cancelSpot() {
+        if (reservedSpots > 0) {
+            reservedSpots--;
+        }
     }
 }
